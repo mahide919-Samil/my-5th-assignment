@@ -1,20 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Issues Tracker</title>
+    <title>GitHub Issuse Tracker</title>
     <!-- add font awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <!-- Add google font -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
-<!-- Add tailwind and daisyUI -->
- <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Add google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Add tailwind and daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
 
+<body>
+    <!-- top section -->
+
+    <section class="bg-gray-200 flex items-center justify-center h-screen">
+        <div class="w-[420px] bg-white rounded-xl shadow-lg p-8">
+            <div class="text-center mb-6">
+                <img src="./assets/github-logo.png" class="w-16 mx-auto mb-3" />
+                <h1 class="text-2xl font-bold text-gray-700">
+                    GitHub Issues Tracker
+                </h1>
+                <p class="text-gray-500 text-sm">
+                    Sign in to manage your issues
+                </p>
+            </div>
+            <div class="mb-4">
+                <label class="block mb-2 text-gray-700">
+                    Username
+                </label>
+                <input type="text" placeholder="Enter Username"
+                    class="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400" />
+                <p class="text-blue-500 text-sm mt-1">
+                    Default: admin
+                </p>
+            </div>
+            <div class="mb-4">
+                <label class="block mb-2 text-gray-700">
+                    Password
+                </label>
+                <input type="password" placeholder="Enter Password"
+                    class="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400" />
+                <p class="text-blue-500 text-sm mt-1">
+                    Default: admin123
+                </p>
+            </div>
+            <button
+                class="w-full py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-purple-600 to-blue-600">
+                Sign In
+            </button>
+            <div class="flex items-center my-5">
+                <hr class="flex-grow border-gray-300">
+                <span class="mx-3 text-gray-500 text-sm">OR</span>
+                <hr class="flex-grow border-gray-300">
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg text-center">
+                <p class="text-gray-500 mb-2">
+                    Demo Credentials:
+                </p>
+                <p>
+                    <b>Username:</b> admin
+                </p>
+                <p>
+                    <b>Password:</b> admin123
+                </p>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
