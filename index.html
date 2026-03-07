@@ -36,7 +36,7 @@
                 <label class="block mb-2 text-gray-700">
                     Username
                 </label>
-                <input type="text" placeholder="Enter Username"
+                <input id="username" type="text" placeholder="Enter Username"
                     class="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400" />
                 <p class="text-blue-500 text-sm mt-1">
                     Default: admin
@@ -46,14 +46,14 @@
                 <label class="block mb-2 text-gray-700">
                     Password
                 </label>
-                <input type="password" placeholder="Enter Password"
+                <input id="password" type="password" placeholder="Enter Password"
                     class="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400" />
                 <p class="text-blue-500 text-sm mt-1">
                     Default: admin123
                 </p>
             </div>
-            <button
-                class="w-full py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-purple-600 to-blue-600">
+            <button onclick="login()"
+                class="w-full py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 cursor-pointer">
                 Sign In
             </button>
             <div class="flex items-center my-5">
@@ -74,6 +74,7 @@
             </div>
         </div>
     </section>
+    <script src="./index.js"></script>
 </body>
 
 </html>
