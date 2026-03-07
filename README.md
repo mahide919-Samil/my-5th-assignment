@@ -1,129 +1,160 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
-
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
-
----
-
-# Assignment-05: GitHub Issues Tracker
+1️⃣ What is the difference between var, let, and const?
 
 
-### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
+ Ans: var, let, এবং const — তিনটাই JavaScript এ variable declare করার জন্য ব্যবহার হয়, কিন্তু এদের behaviour আলাদা।
+
+var
+পুরোনো JavaScript variable keywordবৈশিষ্ট্য
+Function scoped
+Redeclare করা যায়
+Reassign করা যায়
+
+Example
+var name = "Rahim";
+var name = "Karim";   
+name = "Jamal";  
+console.log(name);
+
+ let
+ES6 (2015) এ introduce হয়েছেবৈশিষ্ট্য
+Block scoped
+Redeclare করা যায় না
+Reassign করা যায়
+Example
+let age = 20;
+age = 25;  
+console.log(age);
+
+ Redeclare করা যাবে না
+let age = 20;
+let age = 30;   ERROR
+
+const
+Constant variableবৈশিষ্ট্য
+Block scoped
+Redeclare করা যায় না
+Reassign করা যায় না
+Example
+const country = "Bangladesh";
+console.log(country);
+ Reassign করা যাবে না
+const country = "Bangladesh";
+country = "USA"; ERROR
+
+2️⃣ What is the spread operator (...)?
+
+Ans: স্প্রেড অপারেটর (Spread Operator) হলো জাভাস্ক্রিপ্টের একটি অত্যন্ত শক্তিশালী এবং জনপ্রিয় ফিচার, যা তিনটি ডট (...) দিয়ে প্রকাশ করা হয় । 
+
+এটি মূলত জাভাস্ক্রিপ্ট ES6 সংস্করণে যুক্ত করা হয়েছে এবং এটি মডার্ন জাভাস্ক্রিপ্টের একটি গুরুত্বপূর্ণ অংশ ।সহজ কথায়, স্প্রেড অপারেটর কোনো একটি অ্যারে (Array) বা অবজেক্টের (Object) ভেতরের উপাদানগুলোকে "ছড়িয়ে দেওয়া" বা "বের করে আনা"-র কাজ করে।
+
+ অ্যারের ক্ষেত্রে স্প্রেড অপারেটরস্প্রেড অপারেটর ব্যবহার করে সহজেই একটি অ্যারের সব উপাদান অন্য একটি অ্যারেতে কপি করতে পারেন বা একাধিক অ্যারে যুক্ত করতে পারেন।অ্যারে কপি করা: আপনি যদি একটি অ্যারের মান অন্যটিতে কপি করতে চান, তবে এটি ব্যবহার করা সবচেয়ে সহজ উপায়।
+ 
+ উদাহরণ: const numbers = [1, 2, 3]; const newNumbers = [...numbers, 4, 5]; এখানে newNumbers-এর মান হবে [1, 2, 3, 4, 5] 。অ্যারে যুক্ত করা (Concatenation): দুটি বা তার বেশি অ্যারে একত্রে জোড়া দেওয়ার জন্য এটি ব্যবহৃত হয়।
+ 
+ ২. অবজেক্টের ক্ষেত্রে স্প্রেড অপারেটরঅবজেক্টের প্রপার্টিগুলো কপি করার জন্য বা নতুন প্রপার্টি যুক্ত করার জন্য এটি ব্যবহার করা হয়।উদাহরণ: একটি অবজেক্টের মান অন্যটিতে নিতে চাইলে: const person = {name: 'Rahim', age: 25}; const updatedPerson = {...person, city: 'Dhaka'}; 。
+ 
+ ৩. ফাংশন আর্গুমেন্ট হিসেবেযখন কোনো ফাংশনে অনেকগুলো আর্গুমেন্ট পাস করতে হয়, তখন একটি অ্যারের সামনে স্প্রেড অপারেটর বসিয়ে দিলে অ্যারের প্রতিটি উপাদান আলাদা আলাদা আর্গুমেন্ট হিসেবে কাজ করে 。স্প্রেড অপারেটর ব্যবহারের সুবিধা:কোড সংক্ষিপ্ত করা: এটি কোডকে অনেক বেশি পরিষ্কার এবং সহজবোধ্য করে তোলে 。ইমিউটেবিলিটি (Immutability): মূল অ্যারে বা অবজেক্ট পরিবর্তন না করে নতুন একটি কপি তৈরি করতে এটি সাহায্য করে, যা আধুনিক প্রোগ্রামিংয়ের (যেমন React) জন্য খুব জরুরি 。যদিও আপনার প্রদানকৃত ফাইলে স্প্রেড অপারেটরের বিস্তারিত কোড উদাহরণ সরাসরি নেই, তবে ফাইলটিতে মডার্ন জাভাস্ক্রিপ্ট (ES6) শেখার গুরুত্ব এবং এর বিভিন্ন ফান্ডামেন্টাল কনসেপ্ট (যেমন অ্যারে ও অবজেক্ট) নিয়ে আলোচনা করা হয়েছে । স্প্রেড অপারেটর হলো সেই মডার্ন জাভাস্ক্রিপ্টেরই একটি অংশ যা ডেভেলপমেন্টের কাজকে আরও সহজ করে দেয় 。
+
+ 3️⃣ What is the difference between map(), filter(), and forEach()?
+
+Ans: জাভাস্ক্রিপ্টে map(), filter(), এবং forEach() এই তিনটি মেথডই অ্যারে (Array) নিয়ে কাজ করার জন্য ব্যবহৃত হয়, তবে এদের কাজ করার ধরন এবং আউটপুট সম্পূর্ণ আলাদা।
 
 
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
+১. forEach()
+এটি মূলত একটি লুপের মতো কাজ করে। এটি অ্যারের প্রতিটি উপাদানের ওপর দিয়ে যায় এবং কোনো একটি কাজ সম্পন্ন করে, কিন্তু এটি নিজে কোনো কিছু রিটার্ন (Return) করে না।
 
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
+কাজ: অ্যারের প্রতিটি উপাদানের জন্য একটি ফাংশন চালানো।
 
+আউটপুট: কোনো নতুন অ্যারে তৈরি করে না; এটি সবসময় undefined রিটার্ন করে।
 
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
+কখন ব্যবহার করবেন: যখন আপনার শুধু ডেটা কনসোলে দেখানো বা ডেটাবেসে সেভ করার মতো কাজ থাকে, কিন্তু নতুন কোনো অ্যারে দরকার হয় না।
 
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
+২. map()
+এটি অ্যারের প্রতিটি উপাদানের ওপর কোনো অপারেশন চালিয়ে একটি নতুন অ্যারে তৈরি করে।
 
+কাজ: প্রতিটি উপাদানে পরিবর্তন এনে নতুন মানের একটি তালিকা তৈরি করা।
 
----
+আউটপুট: মূল অ্যারের সমান দৈর্ঘ্যের একটি নতুন অ্যারে রিটার্ন করে।
 
-## 📝 Main Requirements
+কখন ব্যবহার করবেন: যখন আপনি কোনো অ্যারের ডেটাকে কিছুটা পরিবর্তন করে একটি নতুন লিস্ট বা অ্যারে তৈরি করতে চান।
 
-## 🎨 Design Part
+উদাহরণ: একটি অ্যারের সব সংখ্যাকে দ্বিগুণ করে নতুন একটি অ্যারে তৈরি করা।
 
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
+৩. filter()
+এটি নির্দিষ্ট কোনো শর্তের (Condition) ওপর ভিত্তি করে অ্যারের উপাদানগুলোকে বাছাই করে একটি নতুন অ্যারে তৈরি করে।
 
-## Main Page: 
+কাজ: শুধুমাত্র সেই উপাদানগুলোকেই নেয় যা শর্ত পূরণ করে।
 
-### Navbar: 
+আউটপুট: শর্ত পূরণকারী উপাদানগুলো নিয়ে একটি নতুন অ্যারে (মূল অ্যারের থেকে ছোট বা সমান দৈর্ঘ্যের হতে পারে)।
 
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
+কখন ব্যবহার করবেন: যখন আপনার একটি বড় লিস্ট থেকে নির্দিষ্ট কিছু ডেটা খুঁজে বের করার দরকার হয়।
 
 
---- 
+উদাহরণ: একটি লিস্ট থেকে শুধু জোড় সংখ্যাগুলো খুঁজে বের করা
 
+4️⃣ What is an arrow function?
 
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
+Ans: (Arrow Function) হলো জাভাস্ক্রিপ্ট ES6 সংস্করণে প্রবর্তিত ফাংশন লেখার একটি আধুনিক এবং সংক্ষিপ্ত পদ্ধতি। প্রথাগত বা সাধারণ ফাংশন লেখার তুলনায় এটি অনেক কম কোড ব্যবহার করে লেখা যায়।
 
-- Load all issues and display as per Figma
+অ্যারো ফাংশনের সিনট্যাক্স (Syntax):
+সাধারণ ফাংশনে আমরা function কিওয়ার্ড ব্যবহার করি, কিন্তু অ্যারো ফাংশনে তার বদলে একটি তীর চিহ্নের মতো সংকেত => ব্যবহার করা হয়।
 
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
+সাধারণ ফাংশন:
+JavaScript
+function add(a, b) {
+  return a + b;
+}
 
-- Each card shows:
-  - Title
-  - Description
-  - Status
-  - Category
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on a tree name in a card will open a modal and show all the information about that Issue. 
+অ্যারো ফাংশন:
+JavaScript
+const add = (a, b) => a + b;
 
-### 🚀 Challenges
+অ্যারো ফাংশনের প্রধান বৈশিষ্ট্যসমূহ:
+১. সংক্ষিপ্ত কোড: যদি ফাংশনের ভেতরে মাত্র একটি লাইন বা স্টেটমেন্ট থাকে, তবে আপনাকে {} (কার্লি ব্রেসেস) এবং return কিওয়ার্ড ব্যবহার করতে হবে না। এটি নিজে থেকেই ভ্যালু রিটার্ন করে দেয়।
 
+২. this কিওয়ার্ডের ব্যবহার: সাধারণ ফাংশনের নিজস্ব this থাকে, যা ফাংশনটি কীভাবে কল করা হচ্ছে তার ওপর নির্ভর করে। কিন্তু অ্যারো ফাংশনের নিজস্ব কোনো this নেই; এটি তার চারপাশের (Parent scope) this-কে ব্যবহার করে। এটি রিঅ্যাক্ট (React) বা অন্যান্য ফ্রেমওয়ার্কে কাজ করার সময় খুব সুবিধাজনক।
 
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
+৩. প্যারামিটার:
+যদি কোনো প্যারামিটার না থাকে: () => console.log("Hello");
+যদি একটি মাত্র প্যারামিটার থাকে, তবে ব্র্যাকেট না দিলেও চলে: x => x * x;
+একাধিক প্যারামিটার থাকলে: (a, b) => a + b;
 
-- Loading spinner on data load
+কেন এটি ব্যবহার করবেন?
+কোড পড়তে সহজ এবং পরিষ্কার (Clean code) হয়।
 
-- Show active button on changing category names
+অ্যারে মেথড যেমন map, filter, বা reduce-এর ভেতর কলব্যাক ফাংশন হিসেবে এটি ব্যবহার করা খুবই জনপ্রিয়।
 
-- Implement Search Functionality and 8 meaningful github commit.  
+ জাভাস্ক্রিপ্টের কোর ফান্ডামেন্টাল এবং আধুনিক নিয়মগুলো শেখার ক্ষেত্রে অ্যারো ফাংশন একটি অন্যতম স্তম্ভ। এটি আপনার কোড লেখাকে অনেক বেশি স্মার্ট এবং দ্রুত করে তুলবে।
 
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-    - 1️⃣ What is the difference between var, let, and const?
-    - 2️⃣ What is the spread operator (...)?
-    - 3️⃣ What is the difference between map(), filter(), and forEach()?
-    - 4️⃣ What is an arrow function?
-    - 5️⃣ What are template literals?
+ 5️⃣ What are template literals?
+ Ans : টেমপ্লেট লিটারেলস (Template Literals) হলো জাভাস্ক্রিপ্টে স্ট্রিং (String) বা লেখালেখি করার একটি আধুনিক এবং উন্নত পদ্ধতি, যা ES6 সংস্করণে যুক্ত করা হয়েছে। সাধারণ স্ট্রিং লিখতে আমরা সিঙ্গেল কোট (' ') বা ডাবল কোট (" ") ব্যবহার করি, কিন্তু টেমপ্লেট লিটারেলস লিখতে ব্যাকটিক (      `) চিহ্ন ব্যবহার করা হয়।
 
+এর প্রধান বৈশিষ্ট্য এবং সুবিধাগুলো নিচে দেওয়া হলো:
 
----
+১. স্ট্রিং ইন্টারপোলেশন (Variable Injection)
+সবচেয়ে বড় সুবিধা হলো স্ট্রিং-এর ভেতরে সরাসরি ভেরিয়েবল বা এক্সপ্রেশন ব্যবহার করা যায়। এজন্য ${ } সিনট্যাক্স ব্যবহার করতে হয়। আগে আমাদের প্লাস (+) চিহ্ন দিয়ে স্ট্রিং জোড়া লাগাতে হতো, যা বেশ ঝামেলার ছিল।
 
-## 🛠️ Technology Stack
+আগের পদ্ধতি: "My name is " + name + " and I am " + age + " years old."
 
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
+টেমপ্লেট লিটারেলস: `My name is ${name} and I am ${age} years old.`
 
----
+২. মাল্টি-লাইন স্ট্রিং (Multi-line Strings)
+আগে কয়েক লাইনের কোড বা লেখা লিখতে হলে প্রতি লাইনের শেষে \n ব্যবহার করতে হতো। টেমপ্লেট লিটারেলস ব্যবহার করলে আপনি সরাসরি এন্টার দিয়ে নতুন লাইনে লিখতে পারেন, এটি হুবহু আউটপুট হিসেবে দেখাবে।
 
-## 🔑 Demo Credentials
+উদাহরণ:
 
-```text
-Username: admin
-Password: admin123
-```
+JavaScript
+const message = `এই ভিডিওটি
+জাভাস্ক্রিপ্ট শেখার জন্য
+অত্যন্ত কার্যকর।`;
+৩. গাণিতিক হিসাব বা এক্সপ্রেশন
+আপনি ${ }-এর ভেতরে সরাসরি যোগ, বিয়োগ বা যেকোনো জাভাস্ক্রিপ্ট লজিক চালাতে পারেন।
 
+উদাহরণ: `The sum is: ${10 + 20}` (এটি সরাসরি ৩০ আউটপুট দিবে)।
 
----
+কেন এটি ব্যবহার করবেন?
+এটি কোডকে অনেক বেশি পরিষ্কার (Clean) রাখে।
 
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
+বড় বড় প্যারাগ্রাফ বা এইচটিএমএল (HTML) টেমপ্লেট জাভাস্ক্রিপ্টের ভেতরে লেখার সময় এটি জীবন অনেক সহজ করে দেয়।
 
-
-## 📤 What to submit
-
-- **GitHub Repository Link:**
-- **Live Site Link:**
-
----
-
-
+আপনার আপলোড করা ফাইল বা ক্রাশ কোর্সের গাইড অনুযায়ী, মডার্ন জাভাস্ক্রিপ্ট বা ES6 শেখার ক্ষেত্রে এটি একটি অত্যন্ত বেসিক কিন্তু পাওয়ারফুল টুল। এটি ব্যবহার করলে আপনাকে আর বারবার প্লাস চিহ্ন দিয়ে স্ট্রিং কনক্যাটিনেশন (Concatenation) করতে হবে না।
