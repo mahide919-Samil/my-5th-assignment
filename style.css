@@ -2,3 +2,13 @@
   font-family: "Geist", sans-serif;
   
 }
+.relative{
+  position: relative;
+}
+.search-icon
+{position: relative;
+  left: 28px;
+}
+.search-input{
+padding-left: 35px;
+}

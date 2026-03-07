@@ -1,12 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- add font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Add google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Add tailwind and daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- add css -->
+     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    hello
-    
+
+<body class="bg-gray-100">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow p-4 flex justify-between items-center">
+
+        <div class="flex items-center gap-2">
+
+            <!-- PUT YOUR LOGO HERE -->
+            <img src="./assets/github-logo.png" class="w-7 ">
+
+            <h1 class="font-bold text-lg">GitHub Issues Tracker</h1>
+
+        </div>
+
+        <div class="input-box flex gap-3">
+           <div class="relative">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i> 
+            <input 
+            id="searchInput" type="text" placeholder="Search issues..." class="search-input border rounded px-3 py-1" />
+         </div>
+            <button onclick="searchIssues()" class="bg-purple-600 text-white px-4 py-1 rounded">
+               <i class="fa-solid fa-plus"></i> New Issue
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <div class="max-w-7xl mx-auto p-6">
+
+        <!-- TABS -->
+        <div class="bg-white p-4 rounded shadow mb-4">
+
+            <div class="flex gap-3">
+
+                <button id="allBtn" class="tabBtn bg-purple-600 text-white px-4 py-1 rounded cursor-pointer">
+                    All
+                </button>
+
+                <button id="openBtn" class="tabBtn bg-gray-200 px-4 py-1 rounded cursor-pointer">
+                    Open
+                </button>
+
+                <button id="closedBtn" class="tabBtn bg-gray-200 px-4 py-1 rounded cursor-pointer">
+                    Closed
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ISSUE HEADER -->
+        <div class="bg-white p-4 rounded shadow flex justify-between items-center mb-4">
+
+            <div class="flex items-center gap-2">
+
+                <span class="text-purple-600 text-xl"><img src="./assets/Aperture.png" alt=""></span>
+
+                <h2 id="issueCount" class="font-semibold">
+                    Issues
+                </h2>
+
+            </div>
+
+            <div class="flex gap-4 text-sm">
+
+                <span class="flex items-center gap-1">
+                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                    Open
+                </span>
+
+                <span class="flex items-center gap-1">
+                    <span class="w-2 h-2 bg-red-500 rounded-full"></span>
+                    Closed
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOADING -->
+        <div id="loader" class="text-center py-10 hidden">
+
+            <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-purple-600 mx-auto"></div>
+
+        </div>
+
+
+        <!-- CARDS -->
+        <div id="issueContainer" class="grid md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+
+    </div>
+
+
+    <!-- MODAL -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-40 hidden flex items-center justify-center">
+
+        <div class="bg-white p-6 rounded w-96">
+
+            <h2 id="modalTitle" class="text-lg font-bold mb-2"></h2>
+
+            <p id="modalDesc" class="text-sm mb-3"></p>
+
+            <p id="modalAuthor"></p>
+
+            <p id="modalPriority"></p>
+
+            <p id="modalStatus"></p>
+
+            <p id="modalCategory"></p>
+
+            <button onclick="closeModal()" class="mt-4 bg-purple-600 text-white px-4 py-1 rounded">
+                Close
+            </button>
+
+        </div>
+
+    </div>
 </body>
+
 </html>
